@@ -1,0 +1,28 @@
+$color1: #e5e3c9;
+$color2: #b4cfb0;
+$color3: #94b49f;
+$color4: #789395;
+$color5: #ffffff;
+$color6: #5e454b;
+$color7: #046582;
+
+@import url("https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap");
+
+//break point
+$break-point_xl: 1200px;
+$break-point_lg: 1024px;
+$break-point-md: 768px;
+$break-point-sp: 540px;
+$break-point-xs: 375px;
+
+.transition {
+    -webkit-transition: all 0.2s 0s ease-in;
+    -moz-transition: all 0.2s 0s ease-in;
+    -o-transition: all 0.2s 0s ease-in;
+    transition: all 0.2s 0s ease-in;
+}
+
+$header-height: 7.52rem;
+$page-width: 1200px;

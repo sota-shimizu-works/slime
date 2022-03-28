@@ -1,0 +1,53 @@
+//media query
+@mixin xl {
+	@media screen and (max-width: $break-point_xl) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media screen and (max-width: $break-point_lg) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media screen and (max-width: $break-point-md) {
+		@content;
+	}
+}
+
+@mixin sm {
+	@media screen and (max-width: $break-point-md - 1) {
+		@content;
+	}
+}
+
+@mixin sp {
+	@media screen and (max-width: $break-point_sp) {
+		@content;
+	}
+}
+
+@mixin xs {
+	@media screen and (max-width: $break-point_xs) {
+		@content;
+	}
+}
+
+// ----
+// * ex)
+//   @include media-max(横幅) {}
+//   @include media-min(横幅) {}
+// ----
+@mixin media-max($width) {
+	@media screen and (max-width: $width) {
+		@content;
+	}
+}
+
+@mixin media-min($width) {
+	@media screen and (min-width: $width) {
+		@content;
+	}
+}
