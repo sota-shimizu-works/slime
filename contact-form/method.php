@@ -6,13 +6,13 @@ class ContactForm
     {
         $append = '<form id="contact-form-wrapper" method="post"';
         if (get_option('contact_form_confilm_is_active')) {
-            if (is_page('contact_confilm')) {
-                $append .=  ' action="' . home_url('/contact_thx/') . '"';
+            if (is_page(SLIMECF_CONFILM_PAGE_NAME)) {
+                $append .=  ' action="' . home_url('/' . SLIMECF_THX_PAGE_NAME . '/') . '"';
             } else {
-                $append .=  ' action="' . home_url('/contact_confilm/') . '"';
+                $append .=  ' action="' . home_url('/' . SLIMECF_CONFILM_PAGE_NAME . '/') . '"';
             }
         } else {
-            $append .=  ' action="' . home_url('/contact/') . '"';
+            $append .=  ' action="' . home_url('/' . SLIMECF_INPUT_PAGE_NAME  . '/') . '"';
         }
         $append .= ' >';
 
@@ -29,7 +29,7 @@ class ContactForm
     {
         if ($text == null) {
             if (get_option('contact_form_confilm_is_active')) {
-                if (is_page('contact_confilm')) {
+                if (is_page(SLIMECF_CONFILM_PAGE_NAME)) {
                     $text = '送信';
                 } else {
                     $text = '確認';

@@ -1,12 +1,10 @@
 <?php
 function create_pages_and_setting()
 {
-    //$pages_array[] = array('title'=>'ページタイトル', 'name'=>'スラッグ', 'parent'=>'親スラッグ');	
-    //例としてお問い合わせページを入力(親ページなし)
-    $pages_array[] = array('title' => 'お問い合わせ', 'name' => 'contact', 'parent' => '');
+    $pages_array[] = array('title' => 'お問い合わせ', 'name' => SLIMECF_INPUT_PAGE_NAME, 'parent' => '');
     if (get_option('contact_form_confilm_is_active')) {
-        $pages_array[] = array('title' => 'お問い合わせ内容確認', 'name' => 'contact_confilm', 'parent' => '');
-        $pages_array[] = array('title' => 'お問い合わせ送信完了', 'name' => 'contact_thx', 'parent' => '');
+        $pages_array[] = array('title' => 'お問い合わせ内容確認', 'name' => SLIMECF_CONFILM_PAGE_NAME, 'parent' => '');
+        $pages_array[] = array('title' => 'お問い合わせ送信完了', 'name' => SLIMECF_THX_PAGE_NAME, 'parent' => '');
     }
 
     if (get_option('contact_form_is_active')) {
