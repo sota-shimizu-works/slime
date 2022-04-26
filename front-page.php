@@ -2,6 +2,12 @@
 
 <?php
 
+for ($i = 0; $i < 5; $i++) {
+    debug($i, 'group');
+}
+
+$ary = ['Im Sota.', 'I LOVE WordPress! 😘'];
+debug($ary);
 debug('debug-kit');
 debug(12);
 

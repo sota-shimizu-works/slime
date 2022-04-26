@@ -105,7 +105,7 @@ function debug_kit_dom($values)
                         $result = htmlspecialchars($result, ENT_QUOTES, 'UTF-8');
 
                         $pre = $dom->createElement('pre', $result);
-                        $pre->setAttribute('class', 'prettyprint');
+                        $pre->setAttribute('class', 'prettyprint lang-php');
 
 
                         $code->appendChild($pre);
@@ -147,7 +147,7 @@ function debug_kit_dom($values)
                     $result = htmlspecialchars($result, ENT_QUOTES, 'UTF-8');
 
                     $pre = $dom->createElement('pre', $result);
-                    $pre->setAttribute('class', 'prettyprint');
+                    $pre->setAttribute('class', 'prettyprint lang-php');
 
 
                     $code->appendChild($pre);
