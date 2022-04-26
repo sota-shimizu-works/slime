@@ -1,0 +1,54 @@
+#debug-kit {
+    background-color: $debug_bg_color;
+    color: $debug_color;
+    .head-ul {
+        display: flex;
+        border-bottom: lighten($debug_bg_color, 15%) 1px solid;
+        border-top: lighten($debug_bg_color, 15%) 1px solid;
+        li {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 1em;
+            border-left: lighten($debug_bg_color, 15%) 1px solid;
+            border-right: lighten($debug_bg_color, 15%) 1px solid;
+            color: lighten($debug_bg_color, 15%);
+            font-size: 12px;
+            cursor: pointer;
+            &::before {
+                font-family: 'Material Icons Sharp';
+                content: "\ef54";
+            }
+
+            &.active {
+                color: $debug_color;
+                background: -webkit-linear-gradient(0deg, #d5e040, #FF8C00, #FF0080);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+
+    .value-ul {
+        li {
+            display: none;
+            &.active {
+                display: block;
+            }
+            .head {
+                display: none;
+            }
+
+            code {
+                display: block;
+                pre {
+                    width: 100%;
+                    border-radius: 0;
+                    @extend .overpass;
+                    font-size: 14px;
+                    background-color: $debug_bg_color;
+                }
+            }
+        }
+    }
+}

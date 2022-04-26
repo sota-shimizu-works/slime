@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Debug-kit
+ */
+require 'debug-kit/require.php';
+
+
+
+
+
 /** 
  * autoload require
  */
@@ -30,7 +39,7 @@ require get_template_directory() . '/functions/method.php';
 require get_template_directory() . '/functions/header-meta/ogp.php';
 require get_template_directory() . '/functions/header-meta/description.php';
 require get_template_directory() . '/functions/util/costom-query.php';
-require get_template_directory() . '/contact-form/require.php';
+// require get_template_directory() . '/contact-form/require.php';
 
 
 
@@ -81,9 +90,5 @@ function my_script_for_header()
 {
     // CSS
     wp_enqueue_style('common_css', get_template_directory_uri() . '/css/front/common.css', array(), '1.0.0', 'all');
-    wp_enqueue_style('code_prettify_css', 'https://github.com/googlearchive/code-prettify/blob/e006587b4a893f0281e9dc9a53001c7ed584d4e7/styles/doxy.css', array(), '1.0.0', 'all');
-
-    // Javascript
-    wp_enqueue_script('code_prettify_js', 'https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=css&skin=sunburst', array());
 }
 add_action('wp_enqueue_scripts', 'my_script_for_header');

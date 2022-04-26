@@ -1,0 +1,553 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;600&display=swap");
+#debug-kit {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*! destyle.css v1.0.15 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+  /* Reset box-model */
+  /* ============================================ */
+  /* Document */
+  /* ============================================ */
+  /**
+   * 1. Correct the line height in all browsers.
+   * 2. Prevent adjustments of font size after orientation changes in iOS.
+   * 3. Remove gray overlay on links for iOS.
+   */
+  /* Sections */
+  /* ============================================ */
+  /**
+   * Remove the margin in all browsers.
+   */
+  /**
+   * Render the `main` element consistently in IE.
+   */
+  /* Vertical rhythm */
+  /* ============================================ */
+  /* Headings */
+  /* ============================================ */
+  /* Lists (enumeration) */
+  /* ============================================ */
+  /* Lists (definition) */
+  /* ============================================ */
+  /* Grouping content */
+  /* ============================================ */
+  /**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+  /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+  /* Text-level semantics */
+  /* ============================================ */
+  /**
+   * Remove the gray background on active links in IE 10.
+   */
+  /**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+  /**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+  /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+  /**
+   * Add the correct font size in all browsers.
+   */
+  /**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+  /* Embedded content */
+  /* ============================================ */
+  /**
+   * Remove the border on images inside links in IE 10.
+   */
+  /* Forms */
+  /* ============================================ */
+  /**
+   * Reset form fields to make them styleable
+   */
+  /**
+   * Reset radio and checkbox appearance to preserve their look in iOS.
+   */
+  /**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+  /**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+  /**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+  /**
+   * Remove the inner border and padding in Firefox.
+   */
+  /**
+   * Restore the focus styles unset by the previous rule.
+   */
+  /**
+   * Remove arrow in IE10 & IE11
+   */
+  /**
+   * Remove padding
+   */
+  /**
+   * Reset to invisible
+   */
+  /**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+  /**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+  /**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+  /**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+  /**
+   * 1. Correct the outline style in Safari.
+   */
+  /**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+  /**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+  /**
+   * Clickable labels
+   */
+  /* Interactive */
+  /* ============================================ */
+  /*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+  /*
+   * Add the correct display in all browsers.
+   */
+  /*
+   * Remove outline for editable content.
+   */
+  /* Table */
+  /* ============================================ */
+  /* Misc */
+  /* ============================================ */
+  /**
+   * Add the correct display in IE 10+.
+   */
+  /**
+   * Add the correct display in IE 10.
+   */
+}
+
+#debug-kit * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#debug-kit ::before,
+#debug-kit ::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+#debug-kit html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-tap-highlight-color: transparent;
+  /* 3*/
+}
+
+#debug-kit body {
+  margin: 0;
+}
+
+#debug-kit main {
+  display: block;
+}
+
+#debug-kit p,
+#debug-kit table,
+#debug-kit blockquote,
+#debug-kit address,
+#debug-kit pre,
+#debug-kit iframe,
+#debug-kit form,
+#debug-kit figure,
+#debug-kit dl {
+  margin: 0;
+}
+
+#debug-kit h1,
+#debug-kit h2,
+#debug-kit h3,
+#debug-kit h4,
+#debug-kit h5,
+#debug-kit h6 {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+#debug-kit ul,
+#debug-kit ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#debug-kit dt {
+  font-weight: bold;
+}
+
+#debug-kit dd {
+  margin-left: 0;
+}
+
+#debug-kit hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+  border: 0;
+  border-top: 1px solid;
+  margin: 0;
+  clear: both;
+  color: inherit;
+}
+
+#debug-kit pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: inherit;
+  /* 2 */
+}
+
+#debug-kit address {
+  font-style: inherit;
+}
+
+#debug-kit a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+#debug-kit abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+#debug-kit b,
+#debug-kit strong {
+  font-weight: bolder;
+}
+
+#debug-kit code,
+#debug-kit kbd,
+#debug-kit samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: inherit;
+  /* 2 */
+}
+
+#debug-kit small {
+  font-size: 80%;
+}
+
+#debug-kit sub,
+#debug-kit sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+#debug-kit sub {
+  bottom: -0.25em;
+}
+
+#debug-kit sup {
+  top: -0.5em;
+}
+
+#debug-kit img {
+  border-style: none;
+  vertical-align: bottom;
+}
+
+#debug-kit embed,
+#debug-kit object,
+#debug-kit iframe {
+  border: 0;
+  vertical-align: bottom;
+}
+
+#debug-kit button,
+#debug-kit input,
+#debug-kit optgroup,
+#debug-kit select,
+#debug-kit textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  border-radius: 0;
+  text-align: inherit;
+}
+
+#debug-kit [type="checkbox"] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+       appearance: checkbox;
+}
+
+#debug-kit [type="radio"] {
+  -webkit-appearance: radio;
+  -moz-appearance: radio;
+       appearance: radio;
+}
+
+#debug-kit button,
+#debug-kit input {
+  /* 1 */
+  overflow: visible;
+}
+
+#debug-kit button,
+#debug-kit select {
+  /* 1 */
+  text-transform: none;
+}
+
+#debug-kit button,
+#debug-kit [type="button"],
+#debug-kit [type="reset"],
+#debug-kit [type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+
+#debug-kit button[disabled],
+#debug-kit [type="button"][disabled],
+#debug-kit [type="reset"][disabled],
+#debug-kit [type="submit"][disabled] {
+  cursor: default;
+}
+
+#debug-kit button::-moz-focus-inner,
+#debug-kit [type="button"]::-moz-focus-inner,
+#debug-kit [type="reset"]::-moz-focus-inner,
+#debug-kit [type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+#debug-kit button:-moz-focusring,
+#debug-kit [type="button"]:-moz-focusring,
+#debug-kit [type="reset"]:-moz-focusring,
+#debug-kit [type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+#debug-kit select::-ms-expand {
+  display: none;
+}
+
+#debug-kit option {
+  padding: 0;
+}
+
+#debug-kit fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+
+#debug-kit legend {
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+#debug-kit progress {
+  vertical-align: baseline;
+}
+
+#debug-kit textarea {
+  overflow: auto;
+}
+
+#debug-kit [type="number"]::-webkit-inner-spin-button,
+#debug-kit [type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+#debug-kit [type="search"] {
+  outline-offset: -2px;
+  /* 1 */
+}
+
+#debug-kit [type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+#debug-kit ::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+#debug-kit label[for] {
+  cursor: pointer;
+}
+
+#debug-kit details {
+  display: block;
+}
+
+#debug-kit summary {
+  display: list-item;
+}
+
+#debug-kit [contenteditable] {
+  outline: none;
+}
+
+#debug-kit table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#debug-kit caption {
+  text-align: left;
+}
+
+#debug-kit td,
+#debug-kit th {
+  vertical-align: top;
+  padding: 0;
+}
+
+#debug-kit th {
+  text-align: left;
+  font-weight: bold;
+}
+
+#debug-kit template {
+  display: none;
+}
+
+#debug-kit [hidden] {
+  display: none;
+}
+
+.overpass, #debug-kit .value-ul li code pre {
+  font-family: 'Overpass Mono', monospace;
+}
+
+#debug-kit {
+  background-color: #1d2327;
+  color: #f0f0f1;
+}
+
+#debug-kit .head-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: #3e4a53 1px solid;
+  border-top: #3e4a53 1px solid;
+}
+
+#debug-kit .head-ul li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 1em;
+  border-left: #3e4a53 1px solid;
+  border-right: #3e4a53 1px solid;
+  color: #3e4a53;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#debug-kit .head-ul li::before {
+  font-family: 'Material Icons Sharp';
+  content: "\ef54";
+}
+
+#debug-kit .head-ul li.active {
+  color: #f0f0f1;
+  background: -webkit-linear-gradient(0deg, #d5e040, #FF8C00, #FF0080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#debug-kit .value-ul li {
+  display: none;
+}
+
+#debug-kit .value-ul li.active {
+  display: block;
+}
+
+#debug-kit .value-ul li .head {
+  display: none;
+}
+
+#debug-kit .value-ul li code {
+  display: block;
+}
+
+#debug-kit .value-ul li code pre {
+  width: 100%;
+  border-radius: 0;
+  font-size: 14px;
+  background-color: #1d2327;
+}
+/*# sourceMappingURL=common.css.map */
