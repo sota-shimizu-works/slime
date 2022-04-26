@@ -1,0 +1,46 @@
+#debug-kit {
+    /* desert scheme ported from vim to google prettify */
+    pre {
+        &.prettyprint {
+            width: 100%;
+            border-radius: 0;
+            @extend .overpass;
+            font-size: 14px;
+            background-color: $debug_bg_color;
+        }
+
+        .str {
+            color: #ff008e;
+        }
+        .kwd {
+            color: #ff008e;
+        }
+        .com {
+            color: #a1a1a1;
+        }
+        .typ {
+            color: #fff338;
+        }
+        .lit {
+            color: #ff5403;
+        }
+        .pun {
+            color: #a1a1a1;
+        }
+        .pln {
+            color: #f8f8f8;
+        }
+        .tag {
+            color: #bc6ff1;
+        }
+        .atn {
+            color: #fff338;
+        }
+        .atv {
+            color: #ff5403;
+        }
+        .dec {
+            color: #ff5403;
+        }
+    }
+}

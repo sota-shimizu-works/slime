@@ -4,7 +4,7 @@ $debug_kit_values = [];
 
 
 
-function debug($val)
+function debug($val, $group = false)
 {
     if (WP_DEBUG) {
         global $debug_kit_values;
@@ -30,7 +30,11 @@ function debug($val)
         $bt_file = $bt_file . ' line:' . $backtrace[0]['line'];
         $data['line'] = $bt_file;
 
-        array_push($debug_kit_values, $data);
+        if ($group) {
+            $debug_kit_values[$group][] = $data;
+        } else {
+            array_push($debug_kit_values, $data);
+        }
     } else {
         return false;
     }
@@ -60,40 +64,98 @@ function debug_kit_dom($values)
 
 
         if (!empty($values)) {
+            $idnex_cnt = 0;
             foreach ($values as $index => $value) {
+                if (is_string($index)) {
+                    /**
+                     * グループ設定の場合
+                     */
 
-                // head list生成
-                $head_li = $dom->createElement('li', $value['line']);
-                $head_li->setAttribute('data-index', $index);
-                if ($index == 0) $head_li->setAttribute('class', 'active');
-                $head_ul->appendChild($head_li);
+                    // head list生成
+                    $head_li = $dom->createElement('li');
+                    $head_li->setAttribute('data-index', $index);
+                    if ($idnex_cnt == 0) $head_li->setAttribute('class', 'active');
+                    $head_li_p = $dom->createElement('p', $index);
+                    $head_li->appendChild($head_li_p);
+                    $head_ul->appendChild($head_li);
+
+                    // value list生成
+                    $value_li = $dom->createElement('li');
+                    $value_li->setAttribute('data-index', $index);
+                    if ($idnex_cnt == 0) $value_li->setAttribute('class', 'active');
+
+                    foreach ($value as $idnex => $once_value) {
+                        // 型とサイズの確認
+                        $value_type = gettype($once_value['value']);
+                        if ($value_type == 'string') {
+                            // 文字列型の場合は文字数を追記
+                            $value_type .= '(' . mb_strlen($once_value['value']) . ')';
+                        }
+
+                        $head_p = $dom->createElement('p', $once_value['line'] . ' :' . $value_type);
+                        $head_p->setAttribute('class', 'head group');
+                        $value_li->appendChild($head_p);
+
+                        $code = $dom->createElement('code');
+
+                        // print_rの内容をリファクタリングして文字列としてpre内に出力
+                        ob_start();
+                        print_r($once_value['value']);
+                        $result = ob_get_clean();
+                        $result = htmlspecialchars($result, ENT_QUOTES, 'UTF-8');
+
+                        $pre = $dom->createElement('pre', $result);
+                        $pre->setAttribute('class', 'prettyprint');
 
 
-                // value list生成
-                $value_li = $dom->createElement('li');
-                $value_li->setAttribute('data-index', $index);
-                if ($index == 0) $value_li->setAttribute('class', 'active');
+                        $code->appendChild($pre);
+                        $value_li->appendChild($code);
+                    }
+                    $value_ul->appendChild($value_li);
+                } else {
+                    // head list生成
+                    $head_li = $dom->createElement('li');
+                    $head_li->setAttribute('data-index', $index);
+                    if ($index == 0) $head_li->setAttribute('class', 'active');
 
-                $head_p = $dom->createElement('p', $value['line']);
-                $head_p->setAttribute('class', 'head');
-                $value_li->appendChild($head_p);
-
-                $code = $dom->createElement('code');
-
-                // print_rの内容をリファクタリングして文字列としてpre内に出力
-                ob_start();
-                print_r($value['value']);
-                $result = ob_get_clean();
-                $result = htmlspecialchars($result, ENT_QUOTES, 'UTF-8');
-
-                $pre = $dom->createElement('pre', $result);
-                $pre->setAttribute('class', 'prettyprint');
+                    $head_li_p = $dom->createElement('p', $value['line']);
+                    $head_li->appendChild($head_li_p);
+                    $head_ul->appendChild($head_li);
 
 
-                $code->appendChild($pre);
-                $value_li->appendChild($code);
+                    // value list生成
+                    $value_li = $dom->createElement('li');
+                    $value_li->setAttribute('data-index', $index);
+                    if ($idnex_cnt == 0) $value_li->setAttribute('class', 'active');
 
-                $value_ul->appendChild($value_li);
+                    // 型とサイズの確認
+                    $value_type = gettype($value['value']);
+                    if ($value_type == 'string') {
+                        // 文字列型の場合は文字数を追記
+                        $value_type .= '(' . mb_strlen($value['value']) . ')';
+                    }
+                    $head_p = $dom->createElement('p', $value['line'] . ' :' . $value_type);
+                    $head_p->setAttribute('class', 'head');
+                    $value_li->appendChild($head_p);
+
+                    $code = $dom->createElement('code');
+
+                    // print_rの内容をリファクタリングして文字列としてpre内に出力
+                    ob_start();
+                    print_r($value['value']);
+                    $result = ob_get_clean();
+                    $result = htmlspecialchars($result, ENT_QUOTES, 'UTF-8');
+
+                    $pre = $dom->createElement('pre', $result);
+                    $pre->setAttribute('class', 'prettyprint');
+
+
+                    $code->appendChild($pre);
+                    $value_li->appendChild($code);
+
+                    $value_ul->appendChild($value_li);
+                }
+                $idnex_cnt++;
             }
         }
 

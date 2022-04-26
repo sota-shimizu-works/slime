@@ -1,4 +1,8 @@
 $(function () {
+    $('#wp-admin-bar-debug-dtn').on('click', function () {
+        $('#debug-kit').toggleClass('active');
+    });
+
     $('.head-ul li').on('click', function () {
         let index = $(this).data('index');
         $('.head-ul li').removeClass('active');

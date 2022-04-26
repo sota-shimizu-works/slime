@@ -10,6 +10,22 @@ add_action('shutdown', 'debug_kit_display');
 
 
 if (WP_DEBUG) {
+
+
+
+    function add_admin_bar_menu($wp_admin_bar)
+    {
+        //追加系コマンド
+        $wp_admin_bar->add_node(array(
+            'id'    => 'debug-dtn', //成立するIDならばなんでもよい
+            'title' => 'DEBUG'
+        ));
+    }
+
+    add_action('admin_bar_menu', 'add_admin_bar_menu', 99);
+
+
+
     function debug_import_file()
     {
         // CSS
