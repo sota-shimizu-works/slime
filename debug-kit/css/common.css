@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;600&display=swap");
 #debug-kit {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /*! destyle.css v1.0.15 | MIT License | https://github.com/nicolas-cusan/destyle.css */
   /* Reset box-model */
   /* ============================================ */
@@ -149,13 +150,18 @@
    * Add the correct display in IE 10.
    */
 }
+
 #debug-kit * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
 #debug-kit ::before,
 #debug-kit ::after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
+
 #debug-kit html {
   line-height: 1.15;
   /* 1 */
@@ -164,12 +170,15 @@
   -webkit-tap-highlight-color: transparent;
   /* 3*/
 }
+
 #debug-kit body {
   margin: 0;
 }
+
 #debug-kit main {
   display: block;
 }
+
 #debug-kit p,
 #debug-kit table,
 #debug-kit blockquote,
@@ -181,6 +190,7 @@
 #debug-kit dl {
   margin: 0;
 }
+
 #debug-kit h1,
 #debug-kit h2,
 #debug-kit h3,
@@ -192,20 +202,25 @@
   font-weight: inherit;
   margin: 0;
 }
+
 #debug-kit ul,
 #debug-kit ol {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 #debug-kit dt {
   font-weight: bold;
 }
+
 #debug-kit dd {
   margin-left: 0;
 }
+
 #debug-kit hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -217,20 +232,24 @@
   clear: both;
   color: inherit;
 }
+
 #debug-kit pre {
   font-family: monospace, monospace;
   /* 1 */
   font-size: inherit;
   /* 2 */
 }
+
 #debug-kit address {
   font-style: inherit;
 }
+
 #debug-kit a {
   background-color: transparent;
   text-decoration: none;
   color: inherit;
 }
+
 #debug-kit abbr[title] {
   border-bottom: none;
   /* 1 */
@@ -240,10 +259,12 @@
           text-decoration: underline dotted;
   /* 2 */
 }
+
 #debug-kit b,
 #debug-kit strong {
   font-weight: bolder;
 }
+
 #debug-kit code,
 #debug-kit kbd,
 #debug-kit samp {
@@ -252,9 +273,11 @@
   font-size: inherit;
   /* 2 */
 }
+
 #debug-kit small {
   font-size: 80%;
 }
+
 #debug-kit sub,
 #debug-kit sup {
   font-size: 75%;
@@ -262,22 +285,27 @@
   position: relative;
   vertical-align: baseline;
 }
+
 #debug-kit sub {
   bottom: -0.25em;
 }
+
 #debug-kit sup {
   top: -0.5em;
 }
+
 #debug-kit img {
   border-style: none;
   vertical-align: bottom;
 }
+
 #debug-kit embed,
 #debug-kit object,
 #debug-kit iframe {
   border: 0;
   vertical-align: bottom;
 }
+
 #debug-kit button,
 #debug-kit input,
 #debug-kit optgroup,
@@ -297,66 +325,78 @@
   border-radius: 0;
   text-align: inherit;
 }
-#debug-kit [type=checkbox] {
+
+#debug-kit [type="checkbox"] {
   -webkit-appearance: checkbox;
   -moz-appearance: checkbox;
        appearance: checkbox;
 }
-#debug-kit [type=radio] {
+
+#debug-kit [type="radio"] {
   -webkit-appearance: radio;
   -moz-appearance: radio;
        appearance: radio;
 }
+
 #debug-kit button,
 #debug-kit input {
   /* 1 */
   overflow: visible;
 }
+
 #debug-kit button,
 #debug-kit select {
   /* 1 */
   text-transform: none;
 }
+
 #debug-kit button,
-#debug-kit [type=button],
-#debug-kit [type=reset],
-#debug-kit [type=submit] {
+#debug-kit [type="button"],
+#debug-kit [type="reset"],
+#debug-kit [type="submit"] {
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
 }
+
 #debug-kit button[disabled],
-#debug-kit [type=button][disabled],
-#debug-kit [type=reset][disabled],
-#debug-kit [type=submit][disabled] {
+#debug-kit [type="button"][disabled],
+#debug-kit [type="reset"][disabled],
+#debug-kit [type="submit"][disabled] {
   cursor: default;
 }
+
 #debug-kit button::-moz-focus-inner,
-#debug-kit [type=button]::-moz-focus-inner,
-#debug-kit [type=reset]::-moz-focus-inner,
-#debug-kit [type=submit]::-moz-focus-inner {
+#debug-kit [type="button"]::-moz-focus-inner,
+#debug-kit [type="reset"]::-moz-focus-inner,
+#debug-kit [type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
+
 #debug-kit button:-moz-focusring,
-#debug-kit [type=button]:-moz-focusring,
-#debug-kit [type=reset]:-moz-focusring,
-#debug-kit [type=submit]:-moz-focusring {
+#debug-kit [type="button"]:-moz-focusring,
+#debug-kit [type="reset"]:-moz-focusring,
+#debug-kit [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
+
 #debug-kit select::-ms-expand {
   display: none;
 }
+
 #debug-kit option {
   padding: 0;
 }
+
 #debug-kit fieldset {
   margin: 0;
   padding: 0;
   border: 0;
   min-width: 0;
 }
+
 #debug-kit legend {
   color: inherit;
   /* 2 */
@@ -369,60 +409,76 @@
   white-space: normal;
   /* 1 */
 }
+
 #debug-kit progress {
   vertical-align: baseline;
 }
+
 #debug-kit textarea {
   overflow: auto;
 }
-#debug-kit [type=number]::-webkit-inner-spin-button,
-#debug-kit [type=number]::-webkit-outer-spin-button {
+
+#debug-kit [type="number"]::-webkit-inner-spin-button,
+#debug-kit [type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
-#debug-kit [type=search] {
+
+#debug-kit [type="search"] {
   outline-offset: -2px;
   /* 1 */
 }
-#debug-kit [type=search]::-webkit-search-decoration {
+
+#debug-kit [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
+
 #debug-kit ::-webkit-file-upload-button {
   -webkit-appearance: button;
   /* 1 */
   font: inherit;
   /* 2 */
 }
+
 #debug-kit label[for] {
   cursor: pointer;
 }
+
 #debug-kit details {
   display: block;
 }
+
 #debug-kit summary {
   display: list-item;
 }
+
 #debug-kit [contenteditable] {
   outline: none;
 }
+
 #debug-kit table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 #debug-kit caption {
   text-align: left;
 }
+
 #debug-kit td,
 #debug-kit th {
   vertical-align: top;
   padding: 0;
 }
+
 #debug-kit th {
   text-align: left;
   font-weight: bold;
 }
+
 #debug-kit template {
   display: none;
 }
+
 #debug-kit [hidden] {
   display: none;
 }
@@ -434,15 +490,18 @@
 #wpadminbar #wp-admin-bar-debug-dtn {
   cursor: pointer;
 }
+
 #wpadminbar #wp-admin-bar-debug-dtn .ab-item {
   display: none;
 }
+
 #wpadminbar #wp-admin-bar-debug-dtn::before {
   font-family: "Material Icons Sharp";
   content: "\ef54";
   padding-left: 5px;
   padding-right: 5px;
 }
+
 #wpadminbar #wp-admin-bar-debug-dtn:hover::before {
   color: #ff0080;
 }
@@ -456,26 +515,34 @@
   background-color: #1d2327;
   color: #f0f0f1;
 }
+
 #debug-kit.active {
   display: block;
 }
+
 #debug-kit *::-moz-selection {
   color: #d5e040;
   background: #ff0080;
 }
+
 #debug-kit *::selection {
   color: #d5e040;
   background: #ff0080;
 }
+
 #debug-kit *::-moz-selection {
   color: #d5e040;
   background: #ff0080;
 }
+
 #debug-kit .head-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   border-bottom: #3e4a53 1px solid;
   border-top: #3e4a53 1px solid;
 }
+
 #debug-kit .head-ul li {
   border-left: #3e4a53 1px solid;
   border-right: #3e4a53 1px solid;
@@ -483,54 +550,72 @@
   font-size: 12px;
   cursor: pointer;
 }
+
 #debug-kit .head-ul li p {
   overflow: hidden;
   padding: 1em;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
 }
+
 #debug-kit .head-ul li p::before {
   font-family: "Material Icons Sharp";
   content: "\ef54";
 }
+
 #debug-kit .head-ul li.active {
   color: #f0f0f1;
   background: -webkit-linear-gradient(0deg, #d5e040, #ff8c00, #ff0080);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 #debug-kit .value-ul li {
   display: none;
   max-height: 75vh;
   overflow: auto;
 }
+
 #debug-kit .value-ul li.active {
   display: block;
 }
+
 #debug-kit .value-ul li::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
+
 #debug-kit .value-ul li::-webkit-scrollbar-thumb {
   background: -webkit-linear-gradient(90deg, #d5e040, #ff8c00, #ff0080);
   border-radius: 2px;
 }
+
 #debug-kit .value-ul li .head {
   font-size: 14px;
   padding: 1em;
   padding-bottom: 4px;
   color: #f0f0f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
   margin-top: 20px;
   color: #536570;
 }
+
 #debug-kit .value-ul li .head::before {
   font-family: "Material Icons Sharp";
   content: "\ead3";
 }
+
 #debug-kit .value-ul li code {
   display: block;
 }
@@ -538,42 +623,54 @@
 #debug-kit {
   /* desert scheme ported from vim to google prettify */
 }
+
 #debug-kit pre.prettyprint {
   width: 100%;
   border-radius: 0;
   font-size: 14px;
   background-color: #1d2327;
 }
+
 #debug-kit pre .str {
   color: #ff008e;
 }
+
 #debug-kit pre .kwd {
   color: #ff008e;
 }
+
 #debug-kit pre .com {
   color: #a1a1a1;
 }
+
 #debug-kit pre .typ {
   color: #fff338;
 }
+
 #debug-kit pre .lit {
   color: #ff5403;
 }
+
 #debug-kit pre .pun {
   color: #a1a1a1;
 }
+
 #debug-kit pre .pln {
   color: #f8f8f8;
 }
+
 #debug-kit pre .tag {
   color: #bc6ff1;
 }
+
 #debug-kit pre .atn {
   color: #fff338;
 }
+
 #debug-kit pre .atv {
   color: #ff5403;
 }
+
 #debug-kit pre .dec {
   color: #ff5403;
 }

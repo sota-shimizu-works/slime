@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": ";AEAA,AAAA,cAAc,CAAD;EACT,4DAA4D;CA2H/D;;AC5HD,AAAA,cAAc,CAAD;EACT,4DAA4D;EAO5D;;8BAE0B;EAS1B;;8BAE0B;EAM1B;;8BAE0B;EAK1B;;8BAE0B;EAO1B;;8BAE0B;EA0F1B;;8BAE0B;CAG7B;;AC5ID,AAAA,cAAc,CAAD;EACT,4DAA4D;EAO5D;;8BAE0B;EA0B1B;;8BAE0B;CA+B7B",
+    "sources": [
+        "content.scss",
+        "_variables.scss",
+        "_typograpy.scss",
+        "_block-text.scss",
+        "_block-media.scss"
+    ],
+    "names": [],
+    "file": "content.css"
+}

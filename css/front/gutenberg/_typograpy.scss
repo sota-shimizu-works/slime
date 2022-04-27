@@ -1,0 +1,125 @@
+.#{$_prefix} {
+    /* Typography ------------------------------------------- */
+
+    a {
+        // anker basic style
+
+        &:focus {
+            // anker focus style
+        }
+        &:hover {
+            // anker hover style
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        // headings common style
+    }
+
+    h1 {
+        // h1 style
+    }
+    h2 {
+        // h2 style
+    }
+    h3 {
+        // h3 style
+    }
+    h4 {
+        // h4 style
+    }
+    h5 {
+        // h5 style
+    }
+    h6 {
+        // h6 style
+    }
+
+    ul,
+    ol {
+        // lists common style
+        li {
+            // list item common style
+            a {
+                // anker common style in list item
+            }
+        }
+    }
+    ul {
+        // unordered list style
+        li {
+            // list item style in unorder list
+            a {
+                // anker style in list item
+            }
+        }
+    }
+    ol {
+        // order list style
+        li {
+            // list item style in order list
+            a {
+                // anker style in list item
+            }
+        }
+    }
+
+    p {
+        // paragraph style
+    }
+
+    b,
+    strong {
+        // bold text & important text common style
+    }
+    b {
+        // bold text style
+    }
+    strong {
+        // important text style
+    }
+
+    i {
+        // italic text style
+        &:not(.fa-solid, .fa-regular, .fa-light, .fa-thin, .fa-duotone, .fa-brands, .fas) {
+            // italic text style not fontawesome
+        }
+    }
+
+    em {
+        // emphasized text style
+    }
+
+    small {
+        // smaller text style
+    }
+
+    mark {
+        // marked text style
+    }
+
+    sub {
+        // subscript text style
+    }
+
+    sup {
+        //superscript text style
+    }
+
+    del {
+        // deleted text style
+    }
+
+    ins {
+        // inserted text style
+    }
+
+    label {
+        // label basic style
+    }
+}

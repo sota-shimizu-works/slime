@@ -3,7 +3,9 @@
 /**
  * Debug-kit
  */
-require 'debug-kit/require.php';
+if (!is_admin()) {
+    require 'debug-kit/require.php';
+}
 
 
 

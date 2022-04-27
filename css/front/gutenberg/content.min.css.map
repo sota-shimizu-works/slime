@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "content.scss",
+        "_variables.scss",
+        "_typograpy.scss",
+        "_block-text.scss",
+        "_block-media.scss"
+    ],
+    "names": [],
+    "file": "content.min.css"
+}

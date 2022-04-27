@@ -1,0 +1,141 @@
+.#{$_prefix} {
+    /* wp-block text category ------------------------------- */
+
+    figure {
+        // figure style
+    }
+
+
+    /*-----------------------
+    ** 引用
+    ------------------------*/
+    .wp-block-quote {
+        blockquote {
+            p {}
+            cite {}
+        }
+    }
+
+
+    /*-----------------------
+    ** コード
+    ------------------------*/
+    .wp-block-code {
+        code {}
+    }
+
+
+    /*-----------------------
+    ** プルクォート
+    ------------------------*/
+    .wp-block-preformatted {
+    }
+
+
+    /*-----------------------
+    ** 成形済みテキスト
+    ------------------------*/
+    .wp-block-pullquote {
+        // プルクォート style
+
+    }
+
+
+    /*-----------------------
+    ** テーブル
+    ------------------------*/
+    .wp-block-table {
+        // table common style
+        table {
+            tr {
+                th {}
+                td {}
+            }
+            thead {
+                tr {
+                    th {}
+                    td {}
+                }
+            }
+            tbody {
+                tr {
+                    th {}
+                    td {}
+                }
+            }
+            tfoot {
+                tr {
+                    th {}
+                    td {}
+                }
+            }
+        }
+        figcaption {}
+
+        &:not(.is-style-stripes) {
+            // not stripes style
+            table {
+                tr {
+                    th {}
+                    td {}
+                }
+                thead {
+                    tr {
+                        th {}
+                        td {}
+                    }
+                }
+                tbody {
+                    tr {
+                        th {}
+                        td {}
+                    }
+                }
+                tfoot {
+                    tr {
+                        th {}
+                        td {}
+                    }
+                }
+            }
+            figcaption {}
+        }
+
+        &.is-style-stripes {
+            // stripes style
+            table
+            table {
+                tr {
+                    th {}
+                    td {}
+                }
+                thead {
+                    tr {
+                        th {}
+                        td {}
+                    }
+                }
+                tbody {
+                    tr {
+                        th {}
+                        td {}
+                    }
+                }
+                tfoot {
+                    tr {
+                        th {}
+                        td {}
+                    }
+                }
+            }
+            figcaption {}
+        }
+    }
+
+
+    /*-----------------------
+    ** 詩
+    ------------------------*/
+    .wp-block-verse {}
+
+}

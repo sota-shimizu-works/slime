@@ -1,0 +1,70 @@
+.#{$_prefix} {
+    /* wp-block media category ------------------------------ */
+
+    figure {
+        // figure style
+    }
+
+
+    /*-----------------------
+    ** 画像
+    ------------------------*/
+    .wp-block-image {
+
+        // image common style
+        img {}
+
+        &.size-full {
+            img {}
+        }
+
+        // 角丸
+        &.is-style-rounded {
+            img {}
+        }
+
+        // サイズ変更
+        &.is-resized {
+            img {}
+        }
+
+        // キャプション
+        figcaption {}
+
+    }
+
+
+    /*-----------------------
+    ** 画像
+    ------------------------*/
+    .wp-block-gallery {
+
+        // common style
+        .wp-block-image {
+            img {}
+        }
+
+        // nested style
+        .has-nested-images {
+            .wp-block-image {
+                img {}
+            }
+        }
+
+        // colmns style
+        .columns-default {
+            .wp-block-image {
+                img {}
+            }
+        }
+
+        // cropped style
+        .is-cropped {
+            .wp-block-image {
+                img {}
+            }
+        }
+
+    }
+
+}
