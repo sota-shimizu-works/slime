@@ -37,11 +37,7 @@ use Cake\Chronos\Chronos;
 /**
  * File require
  */
-require get_template_directory() . '/functions/method.php';
-require get_template_directory() . '/functions/header-meta/ogp.php';
-require get_template_directory() . '/functions/header-meta/description.php';
-require get_template_directory() . '/functions/util/costom-query.php';
-// require get_template_directory() . '/contact-form/require.php';
+require get_template_directory() . '/functions/require.php';
 
 
 
