@@ -1,65 +1,34 @@
 # slime
 ## テーマ概要
-カスタマイズ前提のWordPressテーマです。
+カスタマイズ前提のWordPressテーマです。<br>
 コーポ―レートサイトやサービスサイトを想定していますが、SEOなど最低限の設定を行っているものになるのである程度どのタイプのサイトでも対応できます。
 
 ## 機能
-### Chronos 2.3
+### - Chronos 2.3
 chronos2.3が同梱されています。
 
 https://github.com/cakephp/chronos
 
-### Contact form
-プラグインに依存せず使用できるコンタクトフォームが同梱されています。<br>
-WordPress管理画面から有効にすることで使用可能になります。<br>
-必要な固定ページの生成やSMTPの設定を行うことができます。また、メールテンプレートを使用することでHTMLメールの送信も可能です。
 
-https://github.com/sota-shimizu-works/slime/tree/main/contact-form
+### - デバッグツール
+WordPressのdebug modeを有効にすることで使用できる簡易的な変数確認用のツールです。<br>
+メイン・サブループ中にオブジェクトの中身をページ上にdumpするとページがくずれて見づらかったり、htmlタグないで属性と認識されテキストとして表示されないなどの地味な問題を解消します。
+使用方法はシンプルで、WordPressのdebug modeを有効にし、確認したい変数をdebug関数に渡すだけです。
 
 
-### アーカイブページの絞り込み機能
-アーカイブページで決まったGETパラメータでアクセスすることでパラメータに指定された内容で投稿を絞り込みます。
-```php
-// https://example.com/post?categorise=catA,catB&year=2022
+### - Gutenbergのオーバライド用SCSSテンプレート
+Gutenbergで使用できる基本的なブロックエレメントのスタイルをオーバライドするためのテンプレートが用意されています。
 
-$query->set('category_name', 'catA,catB');
-$query->set('year', '2022');
-```
 
-### metaタグ設定
-- og:site_name
-- og:title
-- og:type
-- og:url
-- og:image
-- og:description
-- twitter_card
-- description
+### - アーカイブページの絞り込み機能
+アーカイブページでGETパラメータに指定した値を設定するとクエリに条件を追加してくれます。
 
-上記のmetaタグが自動的に入ります。<br>
-``og_image``はサムネイルが設定されているページでのみ適用され、サムネイルがないページでは挿入されません。デフォルトを設定することでサムネイルが無い場合のみ他の画像を表示するように変更できます。<br>
-``fb_app_id``と``twitter_site``はデフォルトで``false``になっているのでデフォルト値を変更することで有効化できます。
-``twitter_card``の初期値は``summary``になっています。
-```php
-<head>
-... 省略
 
-    <?php if (the_ogp() != '') echo the_ogp() ?>
+### - metaタグ設定
+カスタマイズしないで最低限のmetaタグを挿入します。<br>
+OGPを適当な内容で挿入でき、カスタマイズも簡単です。
 
-</head>
-```
-OGP出力用関数はヘッダーに入っており、引数に配列でオプションを設定することで初期値から値を変更します。<br>
-```php
-/**
- * 
- * @param ary $options                      OGPの情報の初期値です。空で渡した場合適当な内容が設定されます。
- * @param strng $options['site_name']       初期値(サイト名):WordPress設定サイト名
- * @param strng $options['og_type']         初期値(OGタイプ):website
- * @param strng $options['og_url']          初期値(URL):トップページURL
- * @param strng $options['og_image']        初期値(URL):false(サムネイルが無いページでは使用しないため初期値はfalse) 
- * @param strng $options['og_description']  初期値(サイト説明):WordPress設定説明文
- * @param strng $options['fb_app_id']       初期値(ID):fasle
- * @param strng $options['twitter_card']    初期値(type):summary
- * @param strng $options['twitter_site']    初期値(URL):false
- */
-```
+
+### theme options設定
+テーマオプションは指定の定数(配列)に設定情報を書くだけで管理画面に反映されます。<br>
+値も用意された関数を使用するだけで簡単に呼び出せます。
