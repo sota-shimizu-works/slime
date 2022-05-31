@@ -1,0 +1,73 @@
+/*
+** サンプル用scssファイルです。
+** 新規で作成する場合は削除してください。
+*/
+
+@import "reset";
+@import "variables";
+@import "mixin";
+
+$color1: #ffef82;
+$color2: #efd345;
+$color3: #babd42;
+$color4: #82954b;
+$color5: #fff7bc;
+
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+.pacifico {
+    font-family: "Pacifico", cursive;
+}
+
+html {
+    font-size: 10px !important;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: $color5;
+    color: $color4;
+}
+
+a,
+img {
+    display: inline-block;
+}
+
+header {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h1 {
+        font-size: 6.2rem;
+        line-height: 2.5em;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        @extend .pacifico;
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: "";
+            border-radius: 42% 58% 24% 76% / 53% 45% 55% 47%;
+            height: 20vh;
+            width: 300px;
+            background-color: $color2;
+            opacity: 0.2;
+            display: inline-block;
+            position: absolute;
+            top: 0%;
+            left: 25%;
+            z-index: 0;
+        }
+    }
+    p {
+        font-size: 1.4rem;
+        margin-top: 4.8rem;
+        a {
+            font-size: 2.4rem;
+            margin-top: 1.5rem;
+        }
+    }
+}

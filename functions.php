@@ -87,6 +87,9 @@ function set_mime_types($mimes)
 function my_script_for_header()
 {
     // CSS
-    wp_enqueue_style('common_css', get_template_directory_uri() . '/css/front/common.css', array(), '1.0.0', 'all');
+    // wp_enqueue_style('common_css', get_template_directory_uri() . '/css/front/common.css', array(), '1.0.0', 'all');
+
+    // Sample css. If you are new project, delete it.
+    wp_enqueue_style('common_css', get_template_directory_uri() . '/css/front/sample.css', array(), '1.0.0', 'all');
 }
 add_action('wp_enqueue_scripts', 'my_script_for_header');
